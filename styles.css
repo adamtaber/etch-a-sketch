@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gridContainer {
+    display: grid;
+    height: 1000px;
+    width: 1000px;
+}
+
+.gridBlocks {
+    box-sizing: border-box;
+    user-select: none;
+    border-style: solid;
+    border-width: thin;
+}
+
+#btn {
+    height: 100px;
+    width: 300px;
+    font-size: 40px;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 30vh;
+    overflow: auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2)
+}
+
+.modal-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #fefefe;
+    font-size: 50px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animate-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity: 0}
+    to {top:0; opacity: 1}
+}
